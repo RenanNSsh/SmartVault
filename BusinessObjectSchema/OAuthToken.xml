@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<businessObject>
+	<propertyGroup>
+		<property name="Id" type="int" />
+		<property name="AccessToken" type="string" />
+		<property name="RefreshToken" type="string" />
+		<property name="Scope" type="string" />
+		<property name="ExpiresIn" type="int" />
+		<property name="TokenType" type="string" />
+		<property name="CreatedOn" type="System.DateTime" />
+	</propertyGroup>
+	<script>
+		CREATE TABLE OAuthToken (
+		Id INTEGER PRIMARY KEY,
+		AccessToken TEXT,
+		RefreshToken TEXT,
+		Scope TEXT,
+		ExpiresIn INTEGER,
+		TokenType TEXT,
+		CreatedOn DATETIME DEFAULT CURRENT_TIMESTAMP
+		);
+	</script>
+</businessObject>
